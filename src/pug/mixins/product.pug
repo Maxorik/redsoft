@@ -2,7 +2,7 @@ mixin product(data)
     .product
         if data.inStock === 'true'
             .product__image
-                img(src = '../assets/img/' + data.img + '.png' alt = data.img)
+                img(src = './assets/img/' + data.img + '.png' alt = data.img)
 
             .product__name
                 =data.name
@@ -32,7 +32,7 @@ mixin product(data)
         else
             .disabled
                 .product__image
-                    img(src = '../assets/img/' + data.img + '.png' alt = data.img)
+                    img(src = './assets/img/' + data.img + '.png' alt = data.img)
 
                 .product__name
                     =data.name
