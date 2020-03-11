@@ -24,18 +24,16 @@ function getData(i) {
 
         // прелоадер
         btnBuy[i].innerHTML = "<section><div class='sk-wave'><div class='sk-rect sk-rect-1'></div><div class='sk-rect sk-rect-2'></div><div class='sk-rect sk-rect-3'></div><div class='sk-rect sk-rect-4'></div><div class='sk-rect sk-rect-5'></div></div></section>";
-
-        fetch("url", {
-            method: "GET",
-            headers:{"content-type":"application/x-www-form-urlencoded"}
-        }).then( response => {
-            if (response.status !== 200) {
-                return Promise.reject();
-            }
-            return response.text()
-        }).then( () => {
-            storage.btnSold(i);
-            storage.setStorage(i);
-        })
+        
+        fetch('url')
+            .then(res => res.ok ? res : Promise.reject(res))
+            .then(res => {
+                return res.text();
+            }).then(setResults)
+    }
+    
+    function setResults() {
+        storage.btnSold(i);
+        storage.setStorage(i);
     }
 }
