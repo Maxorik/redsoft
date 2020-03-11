@@ -1,0 +1,18 @@
+.mainInput {
+    @extend %normal-font;
+    
+    min-width: 292px;
+    height: 48px;
+    border: 1px solid $input-border;
+    box-sizing: border-box;
+    line-height: 150%;
+    color: $font-color;
+    padding-left: 16px;
+    
+    &::placeholder {
+        @extend %normal-font;
+        
+        color: $placeholder-color;
+    }
+}
+

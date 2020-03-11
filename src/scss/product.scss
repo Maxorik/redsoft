@@ -1,0 +1,31 @@
+.pictures {
+     @extend %flex-center-spb;
+    
+    .product {
+        display: flex;
+        flex-direction: column;
+        
+        .product__buy {
+            @extend %flex-center-spb;
+            
+            .product__buy__price {
+                display: flex;
+                flex-direction: column;
+                
+                .oldText {
+                    color: $crossed-color;
+                    text-decoration: line-through;
+                }
+                
+                .boldText{
+                    font-weight: bold;
+                }
+                
+                .boldText_alone {
+                    white-space: nowrap;
+                    line-height: 48px;
+                }
+            }
+        }
+    }
+}

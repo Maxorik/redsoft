@@ -1,0 +1,99 @@
+// colors
+$background: #f6f3f3;
+$font-color: #343030;
+$btn-text-color: #F4F6F9;
+$placeholder-color: #9F9F9F;
+$crossed-color: #A0A0A0;
+$btn-normal: #403432;
+$btn-hover: #776763;
+$btn-disable: #C1B4B1;
+$btn-basket: #5B3A32;
+$input-border: #E1E1E1;
+$footer: #ECEAEA;
+
+// templates
+%normal-font {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-size: 14px;
+} 
+
+%flex-center-spb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+// fonts
+@font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather-Regular.eot');
+    src: local('Merriweather Regular'), local('Merriweather-Regular'),
+        url('./fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Merriweather-Regular.woff') format('woff'),
+        url('./fonts/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// main rules
+body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+
+div, li, span {
+    font-family: "Merriweather";
+    color: $font-color;
+}
+
+*, *:before, *:after { 
+    box-sizing: border-box; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    margin: 0; 
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: bold;
+    color: $font-color;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+a { 
+    text-decoration: none; 
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.mainHr {
+    border: 1px solid #E1E1E1;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+// import
+@import 'font-awesome.min.scss';
+@import 'button.scss';
+@import 'input.scss';
+@import 'nav.scss';
+@import 'product.scss';
+@import 'content.scss';
+@import 'footer.scss';
+@import 'header.scss';

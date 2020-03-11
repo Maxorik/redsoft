@@ -1,0 +1,12 @@
+.nav {
+    @extend %content;
+    @extend %flex-center-spb;
+    height: 97px;
+    
+    .nav__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

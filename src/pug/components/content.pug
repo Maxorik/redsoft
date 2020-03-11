@@ -1,0 +1,46 @@
+.content
+    h1 Картины эпохи Возрождения
+    
+    .pictures
+        include ../mixins/product.pug
+        +product({
+            img: 'product (1)',
+            name: '«Рождение Венеры»',
+            author: 'Сандро Боттичелли',
+            oldPrice: '2 000 000 $',
+            newPrice: '1 000 000 $',
+            btnType: 'normal',
+            inStock: 'true'
+        })
+        
+        +product({
+            img: 'product (2)',
+            name: '«Тайная вечеря»',
+            author: 'Леонардо да Винчи',
+            oldPrice: '',
+            newPrice: '3 000 000 $',
+            btnType: 'normal',
+            inStock: 'true'
+        })
+        
+        +product({
+            img: 'product (3)',
+            name: '«Сотворение Адама»',
+            author: 'Микеланджело',
+            oldPrice: '6 000 000 $',
+            newPrice: '5 000 000 $',
+            btnType: 'basket',
+            inStock: 'true'
+        })
+        
+        +product({
+            img: 'product (4)',
+            name: '«Урок анатомии»',
+            author: 'Рембрандт',
+            oldPrice: '',
+            newPrice: 'Продана на аукционе',
+            btnType: '',
+            inStock: 'false'
+        })
+        
+    .scrolled

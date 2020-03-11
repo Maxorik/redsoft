@@ -1,0 +1,21 @@
+footer {
+    background: $footer;
+    
+    .nav {
+        @extend %content;
+        
+        .nav__contacts {
+            @extend %flex-center-spb;
+            @extend %normal-font;
+            
+            width: 37%;
+            color: #555555;
+            line-height: .5em;
+
+            .fa {
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
+    }
+}

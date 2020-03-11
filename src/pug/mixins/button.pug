@@ -1,0 +1,6 @@
+mixin button(data)
+    div(class = 'btn btn-' + data.btnType)
+        if data.btnType === 'buy btn-basket'
+            span(class = 'fa fa-check fa-lg')
+            
+        =data.btnText

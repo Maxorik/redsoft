@@ -1,0 +1,45 @@
+mixin product(data)
+    .product
+        if data.inStock === 'true'
+            .product__image
+                img(src = '../assets/img/' + data.img + '.png' alt = data.img)
+
+            .product__name
+                =data.name
+                br
+                span= data.author
+
+            .product__buy
+                .product__buy__price
+                    span(class = 'oldText')= data.oldPrice
+                    span(class = 'boldText')= data.newPrice
+
+                .product__buy__btn
+                    include ../mixins/button.pug
+
+                    if data.btnType === 'normal'
+                        +button({
+                            btnType: 'buy btn-' + data.btnType,
+                            btnText: 'Купить'
+                        })
+
+                    else
+                        +button({
+                            btnType: 'buy btn-' + data.btnType,
+                            btnText: 'В корзине'
+                        })
+            
+        else
+            .disabled
+                .product__image
+                    img(src = '../assets/img/' + data.img + '.png' alt = data.img)
+
+                .product__name
+                    =data.name
+                    br
+                    span= data.author
+
+                .product__buy
+                    .product__buy__price
+                        span(class = 'boldText boldText_alone')= data.newPrice
+                

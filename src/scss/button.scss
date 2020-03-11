@@ -1,0 +1,28 @@
+.btn {
+    @extend %normal-font;
+    color: $btn-text-color;
+    width: 118px;
+    height: 48px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    
+    &:hover {
+        background: $btn-hover;
+    }
+    
+    .fa {
+        color: $btn-text-color;
+        font-weight: 100;
+        margin-right: 5px;
+    }
+}
+
+.btn-normal {
+    background: $btn-normal;
+}
+
+.btn-basket {
+    background: $btn-basket;
+}

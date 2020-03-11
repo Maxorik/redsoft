@@ -1,0 +1,13 @@
+.nav__list {
+    @extend %flex-center-spb;
+    
+    .nav__list__elem {
+        @extend %normal-font;
+        
+        margin-left: 48px;
+        line-height: 48px;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
+

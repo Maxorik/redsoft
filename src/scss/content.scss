@@ -1,0 +1,25 @@
+.content {
+    @extend %content;
+    
+    h1 {
+        margin: 40px auto;
+    }
+    
+    .pictures {
+        width: 100%;
+        margin: auto;
+        
+        .product__name{
+            margin: 25px auto;
+            margin-left: 6%;
+        }
+        
+        .product__buy {
+            margin: auto 20px;
+        }
+    }
+    
+    .scrolled{
+        margin-bottom: 340px;
+    }
+}

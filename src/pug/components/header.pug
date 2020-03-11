@@ -1,0 +1,18 @@
+header
+    .nav
+        .nav__list
+            img(src = "../assets/img/logo.png" alt = "logo")
+            
+            include ../blocks/navigation.pug
+        
+        .nav__search
+            include ../mixins/input.pug
+            +input({
+                placeholder: 'Поиск по названию картины'
+            })
+            
+            include ../mixins/button.pug
+            +button({
+                btnType: 'normal',
+                btnText: 'Найти'
+            })
